@@ -1,0 +1,412 @@
+@use 'sass:color';
+
+// ============================================
+// Design System - Global SCSS Variables
+// ============================================
+
+// Font Families
+$font-display: 'Outfit', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+$font-body: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+$font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+// ============================================
+// Color System - Light Theme (Clean Blue)
+// ============================================
+$color-light-bg: #f5f7fa;
+$color-light-bg-secondary: #ffffff;
+$color-light-bg-tertiary: #f0f4f8;
+$color-light-surface: #ffffff;
+$color-light-surface-elevated: #ffffff;
+
+$color-light-text: #1a202c;
+$color-light-text-secondary: #4a5568;
+$color-light-text-tertiary: #718096;
+$color-light-text-inverse: #ffffff;
+
+$color-light-border: #e2e8f0;
+$color-light-border-strong: #cbd5e1;
+
+$color-light-primary: #3182ce;
+$color-light-primary-hover: #2b6cb0;
+$color-light-primary-light: #ebf4ff;
+$color-light-primary-subtle: #bee3f8;
+
+$color-light-success: #38a169;
+$color-light-success-light: #c6f6d5;
+$color-light-warning: #d69e2e;
+$color-light-warning-light: #fefcbf;
+$color-light-error: #e53e3e;
+$color-light-error-light: #fed7d7;
+$color-light-info: #3182ce;
+$color-light-info-light: #bee3f8;
+
+// Shadows
+$shadow-light-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+$shadow-light-md: 0 2px 4px 0 rgb(0 0 0 / 0.08), 0 1px 2px 0 rgb(0 0 0 / 0.06);
+$shadow-light-lg: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -1px rgb(0 0 0 / 0.06);
+$shadow-light-xl: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -2px rgb(0 0 0 / 0.05);
+
+// ============================================
+// Color System - Dark Theme (Clean Slate)
+// ============================================
+$color-dark-bg: #1a202c;
+$color-dark-bg-secondary: #2d3748;
+$color-dark-bg-tertiary: #323a45;
+$color-dark-surface: #2d3748;
+$color-dark-surface-elevated: #323a45;
+
+$color-dark-text: #f7fafc;
+$color-dark-text-secondary: #e2e8f0;
+$color-dark-text-tertiary: #a0aec0;
+$color-dark-text-inverse: #1a202c;
+
+$color-dark-border: #4a5568;
+$color-dark-border-strong: #5a6678;
+
+$color-dark-primary: #4299e1;
+$color-dark-primary-hover: #3182ce;
+$color-dark-primary-light: #2c5282;
+$color-dark-primary-subtle: #2b6cb0;
+
+$color-dark-success: #48bb78;
+$color-dark-success-light: #22543d;
+$color-dark-warning: #ecc94b;
+$color-dark-warning-light: #744210;
+$color-dark-error: #fc8181;
+$color-dark-error-light: #742a2a;
+$color-dark-info: #4299e1;
+$color-dark-info-light: #2c5282;
+
+// Shadows
+$shadow-dark-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+$shadow-dark-md: 0 2px 4px 0 rgb(0 0 0 / 0.4), 0 1px 2px 0 rgb(0 0 0 / 0.3);
+$shadow-dark-lg: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -1px rgb(0 0 0 / 0.3);
+$shadow-dark-xl: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -2px rgb(0 0 0 / 0.3);
+
+// ============================================
+// CSS Variables - Light Theme (Default)
+// ============================================
+:root {
+  // Fonts
+  --font-display: #{$font-display};
+  --font-body: #{$font-body};
+  --font-mono: #{$font-mono};
+
+  // Background Colors
+  --color-bg: #{$color-light-bg};
+  --color-bg-secondary: #{$color-light-bg-secondary};
+  --color-bg-tertiary: #{$color-light-bg-tertiary};
+  --color-surface: #{$color-light-surface};
+  --color-surface-elevated: #{$color-light-surface-elevated};
+
+  // Text Colors
+  --color-text: #{$color-light-text};
+  --color-text-secondary: #{$color-light-text-secondary};
+  --color-text-tertiary: #{$color-light-text-tertiary};
+  --color-text-inverse: #{$color-light-text-inverse};
+
+  // Border Colors
+  --color-border: #{$color-light-border};
+  --color-border-strong: #{$color-light-border-strong};
+
+  // Primary Colors - Clean Blue
+  --color-primary: #{$color-light-primary};
+  --color-primary-hover: #{$color-light-primary-hover};
+  --color-primary-light: #{$color-light-primary-light};
+  --color-primary-subtle: #{$color-light-primary-subtle};
+
+  // Ant Design Theme Colors
+  --ant-theme-primary: #{$color-light-primary};
+
+  // Semantic Colors
+  --color-success: #{$color-light-success};
+  --color-success-light: #{$color-light-success-light};
+  --color-warning: #{$color-light-warning};
+  --color-warning-light: #{$color-light-warning-light};
+  --color-error: #{$color-light-error};
+  --color-error-light: #{$color-light-error-light};
+  --color-info: #{$color-light-info};
+  --color-info-light: #{$color-light-info-light};
+
+  // Shadows
+  --shadow-sm: #{$shadow-light-sm};
+  --shadow-md: #{$shadow-light-md};
+  --shadow-lg: #{$shadow-light-lg};
+  --shadow-xl: #{$shadow-light-xl};
+
+  // Gradients - Clean, no purple
+  --gradient-primary: linear-gradient(135deg, #3182ce 0%, #4299e1 100%);
+  --gradient-surface: linear-gradient(180deg, #ffffff 0%, #f5f7fa 100%);
+  --gradient-mesh: radial-gradient(at 40% 20%, hsla(210, 100%, 60%, 0.06) 0px, transparent 50%),
+                    radial-gradient(at 80% 0%, hsla(190, 100%, 70%, 0.05) 0px, transparent 50%),
+                    radial-gradient(at 0% 50%, hsla(200, 100%, 60%, 0.05) 0px, transparent 50%);
+
+  // Layout
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 72px;
+  --header-height: 60px;
+  --content-padding: 20px;
+  --border-radius-sm: 6px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 14px;
+  --border-radius-xl: 20px;
+
+  // Transitions
+  --transition-fast: 150ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 300ms ease;
+  --transition-spring: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  // Z-Index
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+}
+
+.css-var-r3{
+  --ant-color-primary: var(--ant-theme-primary);
+  --ant-color-primary-hover: var(--color-primary-hover);
+  // --ant-color-text-light-solid: var(--color-text);
+
+  &.ant-menu-css-var{
+    --ant-menu-item-color: var(--color-text-secondary);
+    --ant-menu-item-hover-color: var(--color-text-secondary);
+  }
+
+  &.ant-switch{
+    --ant-color-text: var(--color-text);
+  }
+}
+// ============================================
+// Dark Theme
+// ============================================
+[data-theme='dark'] {
+  // Background Colors
+  --color-bg: #{$color-dark-bg};
+  --color-bg-secondary: #{$color-dark-bg-secondary};
+  --color-bg-tertiary: #{$color-dark-bg-tertiary};
+  --color-surface: #{$color-dark-surface};
+  --color-surface-elevated: #{$color-dark-surface-elevated};
+
+  // Text Colors
+  --color-text: #{$color-dark-text};
+  --color-text-secondary: #{$color-dark-text-secondary};
+  --color-text-tertiary: #{$color-dark-text-tertiary};
+  --color-text-inverse: #{$color-dark-text-inverse};
+
+  // Border Colors
+  --color-border: #{$color-dark-border};
+  --color-border-strong: #{$color-dark-border-strong};
+
+  // Primary Colors - Purple
+  --color-primary: #{$color-dark-primary};
+  --color-primary-hover: #{$color-dark-primary-hover};
+  --color-primary-light: #{$color-dark-primary-light};
+  --color-primary-subtle: #{$color-dark-primary-subtle};
+
+  // Ant Design Theme Colors
+  --ant-theme-primary: #{$color-dark-primary};
+
+  // Semantic Colors
+  --color-success: #{$color-dark-success};
+  --color-success-light: #{$color-dark-success-light};
+  --color-warning: #{$color-dark-warning};
+  --color-warning-light: #{$color-dark-warning-light};
+  --color-error: #{$color-dark-error};
+  --color-error-light: #{$color-dark-error-light};
+  --color-info: #{$color-dark-info};
+  --color-info-light: #{$color-dark-info-light};
+
+  // Shadows
+  --shadow-sm: #{$shadow-dark-sm};
+  --shadow-md: #{$shadow-dark-md};
+  --shadow-lg: #{$shadow-dark-lg};
+  --shadow-xl: #{$shadow-dark-xl};
+
+  // Gradients - Clean, no purple
+  --gradient-primary: linear-gradient(135deg, #4299e1 0%, #63b3ed 100%);
+  --gradient-surface: linear-gradient(180deg, #2d3748 0%, #1a202c 100%);
+  --gradient-mesh: radial-gradient(at 40% 20%, hsla(210, 100%, 60%, 0.08) 0px, transparent 50%),
+                    radial-gradient(at 80% 0%, hsla(190, 100%, 70%, 0.05) 0px, transparent 50%),
+                    radial-gradient(at 0% 50%, hsla(200, 100%, 60%, 0.05) 0px, transparent 50%);
+}
+
+.css-var-r3[data-theme='dark']{
+  --ant-color-primary: var(--ant-theme-primary);
+  --ant-color-primary-hover: var(--color-primary-hover);
+  // --ant-color-text-light-solid: var(--color-text);
+}
+
+// ============================================
+// Theme Presets - Green (Natural Green)
+// ============================================
+[data-theme-preset='green'][data-theme='light'] {
+  --color-primary: #04a34e;
+  --color-primary-hover: #2f855a;
+  --color-primary-light: #f0fff4;
+  --color-primary-subtle: #9ae6b4;
+  --gradient-primary: linear-gradient(135deg, #38a169 0%, #48bb78 100%);
+}
+
+[data-theme-preset='green'][data-theme='dark'] {
+  --color-primary: #04a34e;
+  --color-primary-hover: #38a169;
+  --color-primary-light: #22543d;
+  --color-primary-subtle: #2f855a;
+  --gradient-primary: linear-gradient(135deg, #48bb78 0%, #68d391 100%);
+}
+
+// ============================================
+// Theme Presets - Purple (Elegant Purple)
+// ============================================
+[data-theme-preset='purple'][data-theme='light'] {
+  --color-primary: #805ad5;
+  --color-primary-hover: #6b46c1;
+  --color-primary-light: #faf5ff;
+  --color-primary-subtle: #d6bcfa;
+  --gradient-primary: linear-gradient(135deg, #805ad5 0%, #9f7aea 100%);
+}
+
+[data-theme-preset='purple'][data-theme='dark'] {
+  --color-primary: #9f7aea;
+  --color-primary-hover: #805ad5;
+  --color-primary-light: #44337a;
+  --color-primary-subtle: #6b46c1;
+  --gradient-primary: linear-gradient(135deg, #9f7aea 0%, #b794f4 100%);
+}
+
+// ============================================
+// Animation Keyframes
+// ============================================
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+// ============================================
+// Utility Mixins
+// ============================================
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin scrollbar-thin {
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 3px;
+
+    &:hover {
+      background: var(--color-border-strong);
+    }
+  }
+}
+
+@mixin hover-lift {
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+@mixin focus-ring {
+  outline: none;
+
+  &:focus-visible {
+    box-shadow: 0 0 0 3px var(--color-primary-light);
+  }
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == xs {
+    @media (max-width: 575px) { @content; }
+  } @else if $breakpoint == sm {
+    @media (min-width: 576px) { @content; }
+  } @else if $breakpoint == md {
+    @media (min-width: 768px) { @content; }
+  } @else if $breakpoint == lg {
+    @media (min-width: 992px) { @content; }
+  } @else if $breakpoint == xl {
+    @media (min-width: 1200px) { @content; }
+  } @else if $breakpoint == xxl {
+    @media (min-width: 1400px) { @content; }
+  }
+}

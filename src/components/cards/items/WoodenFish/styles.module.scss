@@ -1,0 +1,84 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  
+  // Use CSS variables for fonts
+  color: var(--card-text-color, inherit);
+  font-family: var(--card-font-family, inherit);
+}
+
+.fishWrapper {
+  position: relative;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  svg {
+    display: block;
+    width: 100px;
+    height: 80px;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+    transition: transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+}
+
+.stick {
+  position: absolute;
+  top: -40px;
+  right: -30px;
+  width: 80px;
+  height: 80px;
+  pointer-events: none;
+  transform-origin: 80% 80%;
+  transition: transform 0.1s;
+  z-index: 10;
+  
+  &.knocking {
+    animation: knock 0.15s ease-in-out;
+  }
+  
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes knock {
+  0% { transform: rotate(0deg) translate(0, 0); }
+  50% { transform: rotate(-25deg) translate(-10px, 10px); }
+  100% { transform: rotate(0deg) translate(0, 0); }
+}
+
+.count {
+  font-size: 1.5em; // Relative to parent font size
+  font-weight: bold;
+  color: inherit;
+}
+
+.label {
+  font-size: 0.8em;
+  opacity: 0.6;
+}
+
+// Responsive adjustments
+.small {
+  .fishWrapper svg { width: 60px; height: 48px; }
+  .stick { width: 50px; height: 50px; top: -20px; right: -10px; }
+  .count { font-size: 1.2em; }
+}
+
+.large {
+  .fishWrapper svg { width: 140px; height: 112px; }
+  .stick { width: 100px; height: 100px; top: -50px; right: -40px; }
+  .count { font-size: 2em; }
+}

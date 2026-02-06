@@ -1,8 +1,30 @@
 {
-  "name": "local-resource-manager",
+  "name": "大胖工具箱",
   "version": "1.0.0",
-  "description": "大胖工具箱",
+  "description": "一个桌面资源管理工具集，提供文件管理、壁纸切换、系统信息、环境变量管理、桌面卡片等多种实用功能。",
   "type": "module",
+  "author": {
+    "email": "dapang.nana@gmail.com",
+    "name": "大胖",
+    "url": "https://github.com/WFLNANA"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WFLNANA/desktop-tools.git"
+  },
+  "keywords": [
+    "桌面工具",
+    "rust",
+    "tauri",
+    "desktop",
+    "tools",
+    "file manager",
+    "wallpaper",
+    "system info",
+    "environment variables",
+    "desktop cards"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

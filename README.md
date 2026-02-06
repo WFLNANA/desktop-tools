@@ -1,6 +1,6 @@
 # 大胖工具箱
 
-一个功能强大的桌面资源管理工具集，提供文件管理、壁纸切换、系统信息、环境变量管理、桌面卡片等多种实用功能。
+一个桌面资源管理工具集，提供文件管理、壁纸切换、系统信息、环境变量管理、桌面卡片等多种实用功能。
 
 ## 目录
 
@@ -16,49 +16,35 @@
 
 ## 技术栈
 
+<div align="center">
+
 ### 前端技术
 
-- **框架**: React 18.3.1
-- **路由**: React Router DOM 7.12.0
-- **UI组件库**: Ant Design 6.2.1
-- **状态管理**: Zustand 5.0.10
-- **数据请求**: TanStack Query 5.90.19
-- **拖拽功能**: @dnd-kit/core 6.3.1
-- **虚拟滚动**: react-window 2.2.5
-- **图表**: Recharts 3.7.0
-- **样式**: Tailwind CSS 4.1.18 + SCSS
-- **构建工具**: Vite 5.3.1
-- **类型检查**: TypeScript 5.5.3
+| 技术名称 | 版本 | 用途 |
+| :--- | :--- | :--- |
+| **React** | 18.3.1 | 核心框架 |
+| **TypeScript** | 5.5.3 | 类型检查 |
+| **Vite** | 5.3.1 | 构建工具 |
+| **React Router DOM** | 7.12.0 | 路由管理 |
+| **Ant Design** | 6.2.1 | UI组件库 |
+| **Zustand** | 5.0.10 | 状态管理 |
+| **TanStack Query** | 5.90.19 | 数据请求 |
+| **@dnd-kit/core** | 6.3.1 | 拖拽功能 |
+| **react-window** | 2.2.5 | 虚拟滚动 |
+| **Recharts** | 3.7.0 | 图表组件 |
+| **Tailwind CSS** | 4.1.18 | CSS框架 |
+| **SCSS** | - | 样式预处理器 |
 
 ### 后端技术
 
-- **框架**: Tauri 2.0
-- **语言**: Rust (Edition 2021)
-- **异步运行时**: Tokio 1.x
-- **数据库**: SQLite (rusqlite 0.29)
-- **文件系统**: walkdir 2
-- **序列化**: serde 1
-- **日期处理**: chrono 0.4
-- **加密**: argon2 0.5
-- **日志**: log 0.4
+| 技术名称 | 版本 | 用途 |
+| :--- | :--- | :--- |
+| **Tauri** | 2.0 | 桌面应用框架 |
+| **Rust** | Edition 2021 | 后端语言 |
+| **Tokio** | 1.x | 异步运行时 |
+| **SQLite** | rusqlite 0.29 | 数据库 |
 
-### 系统集成
-
-- **Windows特定**: WMI (Windows Management Instrumentation)
-- **GPU监控**: nvml-wrapper (NVIDIA GPU)
-- **壁纸管理**: wallpaper 3
-- **文件对话框**: rfd 0.14
-- **系统托盘**: Tauri Tray Icon
-- **文件系统**: Tauri FS Plugin
-
-### 其他关键技术
-
-- **画布操作**: Fabric.js 5.3.0
-- **HTML转图片**: html2canvas 1.4.1
-- **农历**: lunar-javascript 1.7.7
-- **颜色处理**: react-colorful 5.6.1
-- **动画**: framer-motion 12.30.0
-
+</div>
 ---
 
 ## 项目目录结构
